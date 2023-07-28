@@ -1,3 +1,4 @@
+
 const express = require("express")
 const mongoose = require('mongoose')
 const cors = require("cors")
@@ -10,7 +11,7 @@ const UserModel = require('./models/UserModel')
 const PostModel = require('./models/PostModel')
 
 const app = express()
-mongoose.connect('mongodb://127.0.0.1:27017/blog');
+mongoose.connect('mongodb+srv://root:root@cluster0.u3afgx6.mongodb.net/blog');
 app.use(express.json())
 app.use(cors({
     origin: ["http://localhost:5173"],
