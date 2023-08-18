@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Register from "./Register"
 import Login from "./Login"
 import Home from "./Home"
+import User from "./User"
+import Myposts from "./Myposts"
 import { createContext, useEffect, useState } from "react"
 import axios from "axios"
 
@@ -36,7 +38,9 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/create" element={<CreatePost />}></Route>
+          <Route path="/user" element={<User />}></Route>
           <Route path="/post/:id" element={<Post />}></Route>
+          <Route path="/user/myposts" element={<Myposts />}></Route>
           <Route path="/editpost/:id" element={<EditPost />}></Route>
         </Routes>
       </BrowserRouter>
